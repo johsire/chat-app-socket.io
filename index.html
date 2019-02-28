@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Io Chat App</title>
+    <title>Io Chatting App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -36,13 +36,22 @@
               <input type="submit" class="btn btn-primary" value="Send Message"/>
             </div>
           </form>
+
         </div>
       </div>
     </div>
 
     <script>
       $(function(){
-        var socket = io.connect();
+        var $socket = io.connect();
+        var $messageForm = $('#messageForm');
+        var $message = $('#message');
+        var $chat = $('#chat');
+
+        $messageForm.submit(function(e){
+          e.preventDefault();
+          console.log('Form Submit Successful!');
+        });
       });
     </script>
 
