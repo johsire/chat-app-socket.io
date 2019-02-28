@@ -43,14 +43,20 @@
 
     <script>
       $(function(){
-        var $socket = io.connect();
+        var socket = io.connect();
         var $messageForm = $('#messageForm');
         var $message = $('#message');
         var $chat = $('#chat');
 
         $messageForm.submit(function(e){
           e.preventDefault();
-          console.log('Form Submit Successful!');
+          //console.log('Form Submit Successful!');
+          socket.emit('send message', $message.val());
+          $message.val('');
+        });
+
+        socket.on('New Message', function(data){
+          $chat.append('<div class="well">'+data.msg+'</div>');
         });
       });
     </script>
