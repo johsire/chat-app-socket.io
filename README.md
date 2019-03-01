@@ -2,4 +2,4 @@
 
 - Client(user) and Server(app) real time communication.
 
-- Technologies used: Socket.io | Html | Express Js | Node Js | Vanilla Js
+- Technologies used: Socket.io | Html | Bootstrap | jQuerry | Express Js | Node Js
