@@ -1,7 +1,7 @@
 {
   "name": "s.io-chat-app",
   "version": "1.0.0",
-  "description": "Simple chatting app- socket.io",
+  "description": "Simple chatting app using Websocket",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
